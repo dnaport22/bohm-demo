@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.label {
+  margin: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.description {
+  margin: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.mainImage {
+  height: 400px;
+}
+
+.fullTeam {
+  object-fit: contain;
+  object-position: center;
+  height: 500px;
+  border-radius: 13px;
+  box-shadow: -8px 17px 7px 0px #c8c8c8;
+}

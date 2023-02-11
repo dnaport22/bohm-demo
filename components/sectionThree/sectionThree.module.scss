@@ -1,0 +1,14 @@
+.backgroundImage {
+  object-fit: contain;
+  object-position: bottom;
+  width: 100%;
+}
+
+.overlayText {
+  position: absolute;
+  bottom: 3rem;
+  color: #ffff;
+  font-size: 2.5rem;
+  width: 40%;
+  margin: 2rem;
+}

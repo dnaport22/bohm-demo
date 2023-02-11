@@ -1,0 +1,15 @@
+.container {
+  height: 500px;
+  justify-content: center;
+  padding: 20px;
+  overflow: auto;
+}
+
+.card {
+  width: 80%;
+  height: 450px;
+  background: #ffff;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: -8px 17px 7px 0px #c8c8c8;
+}
