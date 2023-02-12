@@ -1,6 +1,4 @@
 import styles from "./sectionOne.module.scss";
-import {Button, Col, Modal, Row} from "antd";
-import {useState} from "react";
 
 interface ISectionOneProps {
     image: string;
@@ -10,37 +8,66 @@ interface ISectionOneProps {
     withDownloadButton?: boolean;
 }
 
-export default function SectionOne({...props}: ISectionOneProps) {
-    const [modalVisible, setModalVisible] = useState(false);
+import React, {useState} from 'react';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Box from "@mui/material/Box";
+import {Card, Fade, Modal} from "@mui/material";
+import Form from "@/components/form";
+
+const SectionOne = ({...props}: ISectionOneProps) => {
+    const [openModal, setModalOpen] = useState(false);
+
+    const handleModalOpen = () => {
+        setModalOpen(true);
+    };
+
+    const handleModalClose = () => {
+        setModalOpen(false);
+    };
 
     return (
-        <Row style={props.style} className={styles.bannerContainer}>
-            <Col span={12}>
-                <img className={styles.bannerImg} src={props.image} />
-            </Col>
-            <Col span={8} className={styles.bannerSectionA}>
-                <p className={styles.bannerMainText}>
-                    {props.mainText}
-                </p>
-                <p className={styles.bannerSubText}>
-                    {props.subText}
-                </p>
-                {
-                    props.withDownloadButton ?
-                        <div className={styles.buttonContainer}>
-                            <Button className={styles.downloadButton}
-                                    onClick={() => setModalVisible(!modalVisible)}>
-                                Download Whitepaper
-                            </Button>
-                        </div>
-                        : null
-                }
-            </Col>
-            <Modal className={styles.modal} title={"Download Whitepaper"}
-                   onCancel={() => setModalVisible(!modalVisible)}
-                   open={modalVisible} footer={null}>
-                <iframe src={"https://form.jotform.com/230416751370349"}/>
-            </Modal>
-        </Row>
-    )
-}
+        <Grid container className={styles.container} style={{
+            padding: "2rem 0 4rem 0",
+        }}>
+            <Grid item xs={12} sm={6}>
+                <Box component="img" src={props.image} className={styles.imageContainer} />
+            </Grid>
+            <Grid item xs={12} sm={6} className={styles.textContainer}>
+                <Typography variant="h4">{props.mainText}</Typography>
+                <Typography variant="subtitle1">{props.subText}</Typography>
+                <Button
+                    style={{
+                        marginTop: "1rem",
+                        background: "#000"
+                    }}
+                    onClick={handleModalOpen}
+                    variant="contained" color="primary">
+                    Download Whitepaper
+                </Button>
+                <Modal
+                    aria-labelledby="transition-modal-title"
+                    aria-describedby="transition-modal-description"
+                    className={styles.modal}
+                    open={openModal}
+                    onClose={handleModalClose}
+                    closeAfterTransition
+                >
+                    <Fade in={openModal}>
+                        <Card className={styles.modalContent}>
+                            <h2 id="transition-modal-title">Download Whitepaper</h2>
+                            <p id="transition-modal-description">
+                                Thank you for your interest in our whitepaper. Please fill out the form below to download the whitepaper.
+                            </p>
+                            <Form modalState={setModalOpen}/>
+                        </Card>
+                    </Fade>
+                </Modal>
+
+            </Grid>
+        </Grid>
+    );
+};
+
+export default SectionOne;

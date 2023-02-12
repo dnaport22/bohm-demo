@@ -1,5 +1,7 @@
 import styles from "./sectionThree.module.scss";
-import {Col, Row} from "antd";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
 interface ISectionThreeProps {
     image: string;
@@ -8,11 +10,13 @@ interface ISectionThreeProps {
 
 export default function SectionThree({...props}: ISectionThreeProps) {
     return (
-        <Row>
-            <Col span={24}>
-                <img className={styles.backgroundImage} src={props.image} />
-                <p className={styles.overlayText}>{props.mainText}</p>
-            </Col>
-        </Row>
+        <Box className={styles.container}>
+            <img className={styles.image} src={props.image} />
+            <Grid className={styles.overlayContainer}>
+                <Typography className={styles.text} variant="h4">
+                    {props.mainText}
+                </Typography>
+            </Grid>
+        </Box>
     )
 }

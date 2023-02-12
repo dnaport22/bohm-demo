@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import Banner from "@/components/sectionOne";
 import SectionTwo from "@/components/sectionTwo";
 import SectionOne from "@/components/sectionOne";
-import {Divider} from "antd";
 import SectionThree from "@/components/sectionThree";
 import SectionFour from "@/components/sectionFour";
-import RcQueueAnim from "rc-queue-anim";
 
 const sectionOneProps = {
     image: "/img1.jpeg",
@@ -40,6 +37,13 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <SectionOne style={{height: "100vh"}} {...sectionOneProps}/>
+            <hr style={{
+                marginLeft: "2rem",
+                marginRight: "2rem",
+                height: 1,
+                border: "none",
+                backgroundColor: "gray"
+            }}/>
             <SectionTwo {...sectionTwoProps} />
             <SectionThree {...sectionThreeProps} />
             <SectionFour {...sectionFourProps} />

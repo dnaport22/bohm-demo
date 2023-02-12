@@ -1,11 +1,12 @@
 import styles from "./footerBar.module.scss";
 import {Divider, Layout, Row} from "antd";
+import Box from "@mui/material/Box";
 
 const {Footer} = Layout;
 
 export default function FooterBar() {
     return (
-        <div>
+        <Box style={{padding: "2rem"}}>
             <Divider/>
             <Footer>
                 <Row className={styles.container}>
@@ -24,6 +25,6 @@ export default function FooterBar() {
                     </div>
                 </Row>
             </Footer>
-        </div>
+        </Box>
     )
 }

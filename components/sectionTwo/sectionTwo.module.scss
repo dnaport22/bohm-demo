@@ -1,30 +1,33 @@
-.bannerContainer {
+$small-screen: 576px;
+
+.container {
   padding: 2rem;
+
+  @media (max-width: $small-screen) {
+    padding: 0.2rem;
+  }
 }
 
-.bannerSectionA {
+.imageContainer {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
+
+  @media (max-width: $small-screen) {
+    max-width: 400px;
+  }
+}
+
+.textContainer {
+  padding-left: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3rem;
-  padding-bottom: 3rem;
-}
+  align-items: flex-start;
+  flex-wrap: wrap;
 
-.bannerMainText {
-  font-size: 3rem;
-  font-weight: 500;
-  color: black;
-}
-
-.bannerSubText {
-  font-size: 1rem;
-  color: black;
-}
-
-.bannerImg {
-  width: 100%;
-  height: 80%;
-  padding: 1rem;
-  object-fit: contain;
-  object-position: center;
+  @media (max-width: $small-screen) {
+    padding: 2rem;
+  }
 }

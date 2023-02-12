@@ -1,14 +1,25 @@
-.backgroundImage {
-  object-fit: contain;
-  object-position: bottom;
+.container {
+  position: relative;
   width: 100%;
+  height: 500px;
 }
 
-.overlayText {
+.image {
   position: absolute;
-  bottom: 3rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlayContainer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.text {
   color: #ffff;
-  font-size: 2.5rem;
-  width: 40%;
-  margin: 2rem;
 }
