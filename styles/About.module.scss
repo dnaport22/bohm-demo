@@ -28,6 +28,13 @@
 
 .mainImage {
   height: 400px;
+  object-fit: contain;
+  object-position: center;
+
+  @media (max-width: 576px) {
+    max-width: 400px;
+    height: 300px;
+  }
 }
 
 .fullTeam {
@@ -36,4 +43,9 @@
   height: 500px;
   border-radius: 13px;
   box-shadow: -8px 17px 7px 0px #c8c8c8;
+  @media (max-width: 576px) {
+    max-width: 400px;
+    box-shadow: none;
+    height: 300px;
+  }
 }

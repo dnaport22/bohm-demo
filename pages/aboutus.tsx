@@ -3,6 +3,7 @@ import Head from "next/head";
 import {Row} from "antd";
 import SectionOne from "@/components/sectionOne";
 import SectionTwo from "@/components/sectionTwo";
+import Box from "@mui/material/Box";
 
 export default function Aboutus() {
     return (
@@ -13,13 +14,13 @@ export default function Aboutus() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Row className={styles.container}>
+            <Box className={styles.container}>
                 <div className={styles.section}>
                     <h1 className={styles.label}>About Us</h1>
                     <p className={styles.description}>A team of architects, engineers, contractors and technologists
                         driven by the desire to create a waste free future and a custom made world.
                     </p>
-                    <img className={styles.mainImage} src={"/team1.png"}/>
+                    <Box component="img" className={styles.mainImage} src={"/team1.png"}/>
                 </div>
                 <div className={styles.section}>
                     <h1 className={styles.label}>Our Mission</h1>
@@ -34,9 +35,9 @@ export default function Aboutus() {
                     <p className={styles.description}>Meet the people behind our magical product</p>
                 </div>
                 <div className={styles.section}>
-                    <img className={styles.fullTeam} src={"/fullteam.png"}/>
+                    <Box component="img" className={styles.fullTeam} src={"/fullteam.png"}/>
                 </div>
-            </Row>
+            </Box>
         </>
     )
 }
