@@ -107,10 +107,106 @@ a {
 }
 
 body {
-  background: #fefefe !important;
+  background: #ededed !important;
 }
 
 
 header {
-  background-color: #000000 !important;
+  background-color: #ededed !important;
+  box-shadow: none !important;
+}
+
+$small-screen: 576px;
+
+.tileImageContainer {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
+
+  @media (max-width: $small-screen) {
+    max-width: 400px;
+  }
+}
+
+.tileContainer1 {
+  padding-left: 5rem;
+
+  .gridA {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gridB {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+
+    @media (max-width: $small-screen) {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.tileContainer2 {
+  padding-left: 5rem;
+
+  .gridA {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $small-screen) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  .gridB {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+
+    @media (max-width: $small-screen) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: $small-screen) {
+    padding-left: 0;
+  }
+}
+
+.tileContainer3 {
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+
+  .tileImageContainer {
+    width: 60%;
+    object-fit: contain;
+  }
+
+  .gridA {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $small-screen) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  .gridB {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+
+    @media (max-width: $small-screen) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+  @media (max-width: $small-screen) {
+    padding-left: 0;
+  }
 }

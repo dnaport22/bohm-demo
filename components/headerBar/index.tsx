@@ -1,7 +1,7 @@
 import styles from "./headerBar.module.scss";
 import {Layout} from "antd";
 import {Menu} from "antd";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {AppBar, Divider, Drawer, IconButton, List, Toolbar} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
@@ -43,7 +43,7 @@ const Redirects: any = {
     "Contact Us": "/contactus"
 }
 
-const navItems = ["Home", "Lean Construction", "About Us", "Contact Us"];
+const navItems = ["About Us", "Contact Us"];
 
 export default function HeaderBar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -78,19 +78,26 @@ export default function HeaderBar() {
                     <IconButton
                         size="large"
                         edge="start"
-                        color="inherit"
                         aria-label="menu"
                         sx={{ mr: 2, display: { sm: 'none' } }}
                         onClick={handleDrawerToggle}
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Bohm
+                    <Box
+                        sx={{ mr: 2, display: { xs: 'none', sm: 'block' } }}
+                        component="img" src={"logo.png"} style={{
+                        width: "60px",
+                        margin: "10px",
+                        paddingTop: "10px"
+                    }} />
+                    <Typography onClick={() => menuClick("Home")}
+                                variant="h6" component="div" sx={{ flexGrow: 0, color: 'black' }}>
+                        BOHM
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{ flexGrow: 1, marginLeft: 10, display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button onClick={() => menuClick(item)} key={item} sx={{ color: '#fff' }}>
+                            <Button onClick={() => menuClick(item)} key={item} sx={{ color: 'black' }}>
                                 {item}
                             </Button>
                         ))}

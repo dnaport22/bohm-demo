@@ -10,9 +10,7 @@ interface ISectionFourProps {
 export default function SectionFour({...props}: ISectionFourProps) {
     return (
         <Row className={styles.container}>
-            <div className={styles.card}>
-                <SectionTwo style={{height: "100%"}} image={props.image} mainText={props.mainText} subText={""}/>
-            </div>
+            <SectionTwo style={{height: "100%"}} image={props.image} mainText={props.mainText} subText={""}/>
         </Row>
     )
 }

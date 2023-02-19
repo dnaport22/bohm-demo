@@ -27,6 +27,7 @@
     "rc-queue-anim": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-visibility-sensor": "^5.1.1",
     "sass": "^1.58.0",
     "scss": "^0.2.4",
     "styled-components": "^5.3.6",

@@ -3,11 +3,16 @@ import SectionTwo from "@/components/sectionTwo";
 import SectionOne from "@/components/sectionOne";
 import SectionThree from "@/components/sectionThree";
 import SectionFour from "@/components/sectionFour";
+import HeaderBanner from "@/components/HeaderBanner";
+import styles from "@/components/HeaderBanner/headerBanner.module.scss";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import React from "react";
 
 const sectionOneProps = {
-    image: "/img1.jpeg",
-    mainText: "AEC is hyper wasteful. Our mission is waste-free construction.",
-    subText: "a platform that coordinates and automates the transactional activities of the AEC industry, securely validating the process whilst optimising outcomes.",
+    image: "/logo.png",
+    mainText: "Designing a waste free, custom made world of AEC",
+    subText: "A blockchain solution that provides a shared, seamless space to bring everyone onto the same page",
     withDownloadButton: true
 }
 
@@ -36,15 +41,54 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <SectionOne style={{height: "100vh"}} {...sectionOneProps}/>
-            <hr style={{
-                marginLeft: "2rem",
-                marginRight: "2rem",
-                height: 1,
-                border: "none",
-                backgroundColor: "gray"
-            }}/>
-            <SectionTwo {...sectionTwoProps} />
+            <HeaderBanner style={{height: "100vh"}} {...sectionOneProps}/>
+
+            <Grid container className={"tileContainer1"}>
+                <Grid item xs={8} sm={4} className={"gridA"}>
+                    <Box component="img" src={"tile1.png"} className={"tileImageContainer"} />
+                </Grid>
+                <Grid item xs={12} sm={6} className={"gridB"}>
+                    <Box component="img" src={"tile1-text.png"} className={"tileImageContainer"} />
+                </Grid>
+            </Grid>
+
+            <Grid container className={"tileContainer2"}>
+                <Grid item xs={12} sm={6} className={"gridA"}>
+                    <Box component="img" src={"tile2.png"} style={{
+                        width: "50%",
+                        height: "100%",
+                    }} className={styles.tileImageContainer} />
+                </Grid>
+                <Grid item xs={12} sm={6} className={"gridB"}>
+                    <Box component="img" src={"tile2-text.png"} style={{
+                        width: "50%",
+                    }} className={"tileImageContainer"} />
+                </Grid>
+            </Grid>
+
+            <Grid container className={"tileContainer3"}>
+                <Grid item xs={12} sm={6}
+                      style={{
+                          display: "flex",
+                          padding: "0",
+                          justifyContent: "center",
+                          alignContent: "flex-end"
+                      }}
+                >
+                    <Box component="img" src={"tile3-text.png"} style={{
+                        width: "50%",
+                    }} className={"tileImageContainer"} />
+                </Grid>
+                <Grid item xs={12} sm={6} style={{
+                    display: "flex",
+                    justifyContent: "center",
+                }}>
+                    <Box component="img" src={"tile3.png"} style={{
+                        width: "50%",
+                        height: "100%",
+                    }} className={"tileImageContainer"} />
+                </Grid>
+            </Grid>
             <SectionThree {...sectionThreeProps} />
             <SectionFour {...sectionFourProps} />
         </>
