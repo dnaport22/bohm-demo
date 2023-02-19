@@ -71,9 +71,9 @@ $small-screen: 576px;
 .textContainer {
   padding-left: 5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
   flex-wrap: wrap;
 
   @media (max-width: $small-screen) {

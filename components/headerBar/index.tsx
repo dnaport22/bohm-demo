@@ -91,8 +91,9 @@ export default function HeaderBar() {
                         margin: "10px",
                         paddingTop: "10px"
                     }} />
-                    <Typography onClick={() => menuClick("Home")}
-                                variant="h6" component="div" sx={{ flexGrow: 0, color: 'black' }}>
+                    <Typography
+                        onClick={() => menuClick("Home")}
+                        variant="h6" component="div" sx={{ flexGrow: 0, color: 'black' }}>
                         BOHM
                     </Typography>
                     <Box sx={{ flexGrow: 1, marginLeft: 10, display: { xs: 'none', sm: 'block' } }}>
