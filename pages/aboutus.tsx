@@ -18,7 +18,9 @@ export default function Aboutus() {
             <Grid container rowSpacing={1}
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                   className={"tileContainer1"}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} sx={{
+                    height: "100vh",
+                }}>
                     <Box component="img" src={"about-tile1.png"} className={"image"} />
                 </Grid>
                 <Grid item xs={12} sm={6}>
