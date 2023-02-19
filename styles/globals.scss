@@ -210,3 +210,54 @@ $small-screen: 576px;
     padding-left: 0;
   }
 }
+
+.aboutUs {
+  .tileContainer1 {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .image {
+      width: 90%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .tileContainer2 {
+    padding: 0;
+    .tileImageContainer {
+      padding-top: 2rem;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      .image {
+        width: 50%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+
+        @media (max-width: $small-screen) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.contactUs {
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 13px;
+    margin: 2rem;
+
+    @media (max-width: $small-screen) {
+      width: 88vw;
+    }
+  }
+}
