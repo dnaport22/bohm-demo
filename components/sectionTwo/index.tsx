@@ -25,7 +25,9 @@ export default function SectionTwo({...props}: ISectionOneProps) {
                     paddingBottom: "2rem",
                 }}
                 item xs={12} sm={6} className={styles.textContainer}>
-                <Typography variant="h4">{props.mainText}</Typography>
+                <Typography variant="h4" style={{
+                    color: "black"
+                }}>{props.mainText}</Typography>
                 <Typography variant="subtitle1">{props.subText}</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>

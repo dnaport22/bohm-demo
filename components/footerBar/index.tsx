@@ -10,12 +10,16 @@ export default function FooterBar() {
             <Divider/>
             <Footer>
                 <Row className={styles.container}>
-                    <div>
+                    <div style={{
+                        color: "black"
+                    }}>
                         <p>Bohm</p>
                         2023 © Bohm <br/>
                         All Rights Reserved
                     </div>
-                    <div>
+                    <div style={{
+                        color: "black"
+                    }}>
                         BOHM.WORK <br/>
                         THESEUS X <br/>
                         GRAND UNION STUDIOS 2.12 <br/>

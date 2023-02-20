@@ -69,12 +69,15 @@ $small-screen: 576px;
 }
 
 .textContainer {
+  color: black !important;
   padding-left: 5rem;
+  padding-top: 6rem;
   display: flex;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: flex-start !important;
   flex-wrap: wrap;
+  font-weight: bold;
 
   @media (max-width: $small-screen) {
     padding: 2rem;

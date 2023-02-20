@@ -28,6 +28,7 @@ const HeaderBanner = ({...props}: ISectionOneProps) => {
     };
 
     return (
+        <>
         <Grid container className={styles.container}>
             <Grid item xs={12} sm={6} className={styles.textContainer}>
                 <Typography variant="h2">{props.mainText}</Typography>
@@ -61,10 +62,21 @@ const HeaderBanner = ({...props}: ISectionOneProps) => {
                 </Modal>
 
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid sx={{ display: { sm: 'none' } }} item xs={12} sm={6}>
                 <Box component="img" src={props.image} className={styles.imageContainer} />
             </Grid>
         </Grid>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}
+                 component="img"
+                 style={{
+                     position: "absolute",
+                     top: "-40px",
+                     right: "-40px",
+                     width: "700px",
+                     height: "700px"
+                 }}
+                 src={props.image} className={styles.imageContainer} />
+        </>
     );
 };
 
