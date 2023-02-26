@@ -1,0 +1,173 @@
+$extra-small: 0px;
+$small-screen: 600px;
+$medium-screen: 900px;
+$large-screen: 1200px;
+$extra-large-screen: 1560px;
+
+
+.AContainer {
+  padding-left: 5rem;
+  padding-top: 4rem;
+
+  @media (max-width: $small-screen) {
+   padding-left: 3rem;
+  }
+
+  .ARHSImage {
+    display: flex;
+    justify-content: center;
+
+    :global img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      object-position: center;
+
+      @media (max-width: $small-screen) {
+        max-width: 400px;
+        width: auto;
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .AtextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 5rem;
+    color: black;
+
+    :global p {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      width: 300px;
+
+      @media (max-width: $small-screen) {
+        width: auto;
+      }
+    }
+
+    @media (max-width: $small-screen) {
+      font-size: 1.2rem;
+      justify-content: center;
+    }
+  }
+}
+
+.EContainer {
+  padding-left: 5rem;
+  padding-top: 4rem;
+  @media (max-width: $small-screen) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-left: 1rem;
+  }
+
+  .ERHSImage {
+    display: flex;
+    justify-content: flex-end;
+
+    :global img {
+      width: 50%;
+      height: 80%;
+      object-fit: contain;
+      object-position: center;
+
+      @media (max-width: $small-screen) {
+        width: 300px;
+      }
+    }
+  }
+
+  .EtextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 5rem;
+    align-items: center;
+    color: #000 !important;
+
+    :global p {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      width: 300px;
+
+      @media (max-width: $small-screen) {
+        width: auto;
+      }
+    }
+
+    @media (max-width: $small-screen) {
+      font-size: 1.2rem;
+      justify-content: center;
+    }
+  }
+}
+
+.CContainer {
+  padding-left: 5rem;
+  padding-top: 4rem;
+  @media (max-width: $small-screen) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .CLHSImage {
+    display: flex;
+    justify-content: flex-start;
+
+    :global img {
+      width: 60%;
+      height: 80%;
+      object-fit: contain;
+      object-position: center;
+
+      @media (max-width: $small-screen) {
+        width: 300px;
+      }
+    }
+
+    @media (max-width: $small-screen) {
+      justify-content: center;
+    }
+  }
+
+  .CtextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5rem;
+    color: black;
+
+    :global p {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      padding: 3rem;
+      width: 300px;
+
+      @media (max-width: $small-screen) {
+        width: auto;
+      }
+    }
+
+    @media (max-width: $small-screen) {
+      font-size: 1.2rem;
+      justify-content: center;
+    }
+  }
+}

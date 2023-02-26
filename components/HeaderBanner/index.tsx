@@ -16,7 +16,7 @@ import Box from "@mui/material/Box";
 import {Card, Fade, Modal} from "@mui/material";
 import Form from "@/components/form";
 
-const HeaderBanner = ({...props}: ISectionOneProps) => {
+const HeaderBanner = () => {
     const [openModal, setModalOpen] = useState(false);
 
     const handleModalOpen = () => {
@@ -31,8 +31,15 @@ const HeaderBanner = ({...props}: ISectionOneProps) => {
         <>
         <Grid container className={styles.container}>
             <Grid item xs={12} sm={6} className={styles.textContainer}>
-                <Typography variant="h2">{props.mainText}</Typography>
-                <Typography variant="subtitle1">{props.subText}</Typography>
+                <Typography variant="h2" className={styles.bannerMainText}>
+                    Dedicated to
+                    the creation of
+                    a waste-free future
+                    and a custom-made world
+                </Typography>
+                <Typography variant="subtitle1">
+                    A blockchain solution for the Architecture, Engineering and Construction industry
+                </Typography>
                 <Button
                     style={{
                         marginTop: "1rem",
@@ -63,7 +70,7 @@ const HeaderBanner = ({...props}: ISectionOneProps) => {
 
             </Grid>
             <Grid sx={{ display: { sm: 'none' } }} item xs={12} sm={6}>
-                <Box component="img" src={props.image} className={styles.imageContainer} />
+                <Box component="img" src={"logo.png"} className={styles.imageContainer} />
             </Grid>
         </Grid>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}
@@ -75,7 +82,7 @@ const HeaderBanner = ({...props}: ISectionOneProps) => {
                      width: "700px",
                      height: "700px"
                  }}
-                 src={props.image} className={styles.imageContainer} />
+                 src={"logo.png"} className={styles.imageContainer} />
         </>
     );
 };

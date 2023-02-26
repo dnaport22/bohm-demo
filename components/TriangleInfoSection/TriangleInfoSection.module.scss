@@ -1,0 +1,74 @@
+$extra-small: 0px;
+$small-screen: 600px;
+$medium-screen: 900px;
+$large-screen: 1200px;
+$extra-large-screen: 1560px;
+
+.BOHMInfoText {
+  display: flex;
+  font-size: 1.5rem;
+  padding-top: 5rem;
+  width: 80%;
+  float: right;
+
+  :global p {
+    width: 80%;
+    color: #000;
+    font-weight: lighter;
+
+    @media (max-width: $small-screen) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $small-screen) {
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+.triangleContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  @media (max-width: $small-screen) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.triangleTextContainer {
+  width: 70%;
+  float: right;
+  margin-top: 5rem;
+
+  :global p {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #000;
+    text-align: right;
+
+    @media (max-width: $small-screen) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $small-screen) {
+    width: 100%;
+  }
+}
+
+.triangleImage {
+  width: 25%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
+  padding-left: 5rem;
+
+  @media (max-width: $small-screen) {
+    width: 80%;
+    padding-bottom: 2rem;
+    padding-left: 0;
+  }
+}
