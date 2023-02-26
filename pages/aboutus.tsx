@@ -5,6 +5,7 @@ import SectionOne from "@/components/sectionOne";
 import SectionTwo from "@/components/sectionTwo";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Contactus from "@/components/contactus";
 
 export default function Aboutus() {
     return (
@@ -27,14 +28,36 @@ export default function Aboutus() {
                     <Box component="img" src={"about-tile2.png"} className={"image"} />
                 </Grid>
             </Grid>
-            <Grid container className={"tileContainer2"}>
-                <div className={"tileImageContainer"}>
-                    <Box component="img" src={"/about-tile3.png"} className={"image"}/>
-                </div>
+            <Grid container>
+                <Grid item xs={12} sm={6}
+                      style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignContent: "flex-end",
+                          justifyContent: "flex-end",
+                          alignItems: "center",
+                      }}
+                      sx={{
+                          fontSize: {"xs": "1.2rem", "sm": "1.5rem"},
+                          padding: {"xs": "2rem"},
+                      }}
+                >
+                    <p>The result is a world where any built environment is precisely <br/>
+                        cut-to-fit<br/>
+                        fit-for-purpose<br/>
+                        fit-to-last<br/>
+                    </p>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box component="img" src={"cross-section.png"}
+                         className={"tileImageContainer"}
+                         sx={{
+                             width: {"xs": "100% !important", "sm": "80% !important"},
+                         }}
+                    />
+                </Grid>
             </Grid>
-            <Box className={styles.container}>
-                <SectionTwo image={"/team2.png"} mainText={"For the new wave of proptech pioneers."} subText={""}/>
-            </Box>
+            <Contactus />
         </div>
     )
 }
