@@ -57,21 +57,23 @@ export default function Home() {
                     justifyContent: "flex-end",
                     paddingBottom: "5rem",
                     color: "black"
-                }}>
+                }}
+                      sx={{
+                          fontSize: {"xs": "1.2rem"},
+                          justifyContent: {xs: 'center'}
+                      }}
+                >
                     <div style={{
                         display: "flex",
                         justifyContent: "flex-start",
-                        fontSize: "2.5rem"
                     }}>
-                    <span style={{
-                        fontWeight: "bold"
-                    }}>AEC</span> <span style={{
+                    <p style={{
                         marginLeft: "0.5rem",
                         marginRight: "0.5rem",
                         fontWeight: "lighter",
-                    }}>is </span><p style={{
-                        fontWeight: "bold"
-                    }}>hyper wasteful</p>
+                    }}>The AEC industry and the built<br/>
+                        environment is responsible for<br/>
+                        nearly 40% of global </p>
                     </div>
                 </Grid>
             </Grid>
@@ -84,37 +86,33 @@ export default function Home() {
                     }} className={styles.tileImageContainer} />
                 </Grid>
                 <Grid item xs={12} sm={6}
-                      sx={{ alignItems: { xs: 'center' } }}
+                      sx={{ alignItems: { xs: 'center' }, fontSize: {"xs": "1.2rem", "sm": "1.5rem"},
+                          justifyContent: {xs: 'center'} }}
                       style={{
                           display: "flex",
                           flexDirection: "column",
                           justifyContent: "flex-end",
                           paddingBottom: "2rem",
                           color: "black",
-                          fontSize: "3rem"
+                          fontWeight: "lighter",
                       }}>
-                    <p>our mission is<br/>waste-free<br/>construction</p>
+                    <p>Communication between<br/> AEC disciplines is<br/> fragmented & ineffective</p>
                 </Grid>
             </Grid>
 
             <Grid container className={"tileContainer3"}>
                 <Grid item xs={12} sm={7}
-                      sx={{paddingRight: {xs: '1rem'}}}
+                      sx={{paddingRight: {xs: '1rem'}, justifyContent: {xs: 'center', sm: 'flex-end'}}}
                       style={{
                           display: "flex",
                           flexDirection: "row",
-                          justifyContent: "flex-end",
                           paddingBottom: "2rem",
                           color: "black",
-                          fontSize: "1.5rem",
-                          alignItems: "flex-end"
+                          fontSize: "1.2rem",
+                          alignItems: "flex-end",
+                          fontWeight: "lighter",
                       }}>
-                    <p>a platform that coordinates<br/>
-                        and automates the transactional<br/>
-                        activities of the AEC industry<br/>
-                        <br/>
-                        securely validating the process<br/>
-                        whilst optimising outcomes
+                    <p>Procurement of <br/>goods and services<br/> is wasteful, costly<br/> and prone to error
                     </p>
                 </Grid>
                 <Grid item xs={12} sm={5}
@@ -129,8 +127,68 @@ export default function Home() {
                     }} className={"tileImageContainer"} />
                 </Grid>
             </Grid>
-            <SectionThree {...sectionThreeProps} />
-            <SectionFour {...sectionFourProps} />
+            <Grid container>
+            <Grid item xs={20} sm={12}
+                  sx={{paddingLeft: {xs: '5rem'}, justifyContent: {xs: 'flex-start', sm: 'center'}}}
+                  style={{
+                      display: "flex",
+                      fontSize: "1.5rem",
+                      paddingTop: "5rem"
+                  }}>
+                <p style={{
+                    width: "80%",
+                }}>By intelligently connecting all parties in any architectural and
+                    construction process, BOHM ensures smooth handovers, mutual goals and united conversations.
+                    Time, resources and money are optimised and the entire chain is underpinned by
+                    efficiency and transparency. Commercial and environmental goals operate in support of one
+                    another and what would have been waste becomes profit.</p>
+            </Grid>
+                <Grid container style={{
+                    padding: "5rem"
+                }}
+                        sx={{paddingLeft: {xs: 0},
+                            justifyContent: {xs: 'flex-start'}
+                }}
+                >
+                <Grid item xs={12} sm={6} style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                }}>
+                    <Box component="img" src={"triangle.png"} className={"tileImageContainer"}
+                         sx={{
+                             width: {xs: "100% !important", sm: "50% !important", md: "50% !important", lg: "50% !important"},
+                             paddingBottom: {xs: "2rem", sm: "0rem", md: "0rem", lg: "0rem"},
+                         }}/>
+                </Grid>
+                <Grid item xs={12} sm={6} style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                }}>
+                    <Box component="img" src={"triangle.png"} className={"tileImageContainer"}
+                         sx={{
+                             width: {xs: "100% !important", sm: "50% !important", md: "50% !important", lg: "50% !important"},
+                         }}
+                    />
+                </Grid>
+                </Grid>
+            </Grid>
+            <Grid container style={{
+                float: "right",
+                padding: "4rem"
+            }} sx={{
+                justifyContent: {xs: 'center', sm: 'flex-end'},
+                paddingLeft: {xs: '0rem !important'},
+                width: {xs: "100% !important", sm: "80% !important", md: "80% !important", lg: "80% !important"}
+            }}>
+                <Grid item xs={24} sm={12} sx={{paddingLeft: {xs: '5rem'}}}
+                      style={{
+                          display: "flex",
+                          fontSize: "2rem"
+                      }}>
+                    <p>BOHM automates the transactional activities of the AEC industry
+                        <br/><br/> Securely validating process and optimising outcomes</p>
+                </Grid>
+            </Grid>
         </>
     )
 }

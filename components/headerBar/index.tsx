@@ -1,49 +1,18 @@
-import styles from "./headerBar.module.scss";
-import {Layout} from "antd";
-import {Menu} from "antd";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {AppBar, Divider, Drawer, IconButton, List, Toolbar} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import Button from '@mui/material/Button';
 import ListItemText from '@mui/material/ListItemText';
 
-const {Header} = Layout;
-
-const MenuItems = [
-    {
-        key: "1",
-        label: "Home",
-        link: "/"
-    },
-    {
-        key: "2",
-        label: "Lean Construction",
-        link: "/leanconstruction"
-    },
-    {
-        key: "3",
-        label: "About Us",
-        link: "/aboutus"
-    },
-    {
-        key: "4",
-        label: "Contact Us",
-        link: "/contactus"
-    }
-]
-
 const Redirects: any = {
-    "Home": "/",
-    "Lean Construction": "/leanconstruction",
+    "Bohm": "/",
     "About Us": "/aboutus",
-    "Contact Us": "/contactus"
 }
 
-const navItems = ["About Us", "Contact Us"];
+const navItems = ["BOHM", "About Us"];
 
 export default function HeaderBar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -91,11 +60,6 @@ export default function HeaderBar() {
                         margin: "10px",
                         paddingTop: "10px"
                     }} />
-                    <Typography
-                        onClick={() => menuClick("Home")}
-                        variant="h6" component="div" sx={{ flexGrow: 0, color: 'black' }}>
-                        BOHM
-                    </Typography>
                     <Box sx={{ flexGrow: 1, marginLeft: 10, display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button onClick={() => menuClick(item)} key={item} sx={{ color: 'black' }}>
