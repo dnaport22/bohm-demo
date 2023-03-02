@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import ListItemText from '@mui/material/ListItemText';
 
 const Redirects: any = {
-    "Bohm": "/",
+    "BOHM": "/",
     "About Us": "/aboutus",
 }
 
