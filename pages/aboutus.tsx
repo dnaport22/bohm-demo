@@ -61,7 +61,12 @@ export default function Aboutus() {
                           padding: {"xs": "2rem"},
                       }}
                 >
-                    <p>The result is a world where any built environment is precisely <br/>
+                    <p style={{
+                            width: "400px",
+                            marginLeft: "5rem"
+                        }}
+                    >The result is a world where any built environment is precisely <br/>
+                        <br/>
                         cut-to-fit<br/>
                         fit-for-purpose<br/>
                         fit-to-last<br/>

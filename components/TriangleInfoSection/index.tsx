@@ -21,8 +21,6 @@ export default function TriangleInfoSection() {
                     <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
                     <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
                 </div>
-
-
                 <div className={styles.triangleTextContainer}>
                     <p>BOHM automates the transactional activities of the AEC industry
                         <br/><br/>
