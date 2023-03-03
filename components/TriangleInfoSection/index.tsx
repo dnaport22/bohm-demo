@@ -5,7 +5,10 @@ import React from "react";
 
 export default function TriangleInfoSection() {
     return (
-        <>
+        <div style={{
+            fontFamily: "Inter !important",
+            marginTop: "20rem",
+        }}>
             <Grid item xs={18} sm={6} className={styles.BOHMInfoText}>
                 <p>By intelligently connecting all parties in any architectural and
                     construction process, BOHM ensures smooth handovers, mutual goals and united conversations.
@@ -14,8 +17,11 @@ export default function TriangleInfoSection() {
                     another and what would have been waste becomes profit.</p>
             </Grid>
             <Grid container className={styles.triangleContainer}>
-                <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
-                <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
+                <div className={styles.imageContainer}>
+                    <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
+                    <Box component="img" src={"triangle.png"} className={styles.triangleImage} />
+                </div>
+
 
                 <div className={styles.triangleTextContainer}>
                     <p>BOHM automates the transactional activities of the AEC industry
@@ -23,6 +29,6 @@ export default function TriangleInfoSection() {
                         Securely validating process and optimising outcomes</p>
                 </div>
             </Grid>
-        </>
+        </div>
     )
 }

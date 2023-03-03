@@ -31,14 +31,14 @@ const HeaderBanner = () => {
         <>
         <Grid container className={styles.container}>
             <Grid item xs={12} sm={6} className={styles.textContainer}>
-                <Typography variant="h2" className={styles.bannerMainText}>
+                <p className={styles.bannerMainText}>
                     Dedicated to
                     the creation of
                     a waste-free future
                     and a custom-made world
-                </Typography>
+                </p>
                 <Typography variant="subtitle1">
-                    A blockchain solution for the Architecture, Engineering and Construction industry
+                    An on-chain solution for the Architecture, Engineering and Construction industry
                 </Typography>
                 <Button
                     style={{

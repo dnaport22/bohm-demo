@@ -5,6 +5,10 @@ $small-screen: 576px;
 }
 
 .bannerMainText {
+  margin-bottom: 2rem !important;
+  font-size: 2.7rem !important;
+  font-weight: bold;
+  font-family: 'Poppins', open-sans, sans-serif !important;
   @media (max-width: $small-screen) {
     font-size: 2.5rem;
   }

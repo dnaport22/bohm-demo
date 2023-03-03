@@ -5,7 +5,11 @@ import React from "react";
 
 export default function AeCSection() {
     return (
-        <>
+        <div style={{
+            fontFamily: "Inter !important",
+            fontSize: "1.4rem !important",
+            marginTop: "10rem",
+        }}>
             <Grid container item className={styles.AContainer}>
                 <Grid item xs={8} sm={4} className={styles.ARHSImage}>
                     <Box component="img" src={"tile1.png"}/>
@@ -21,7 +25,7 @@ export default function AeCSection() {
                 <Grid item xs={14} sm={6} className={styles.ERHSImage}>
                     <Box component="img" src={"tile2.png"}/>
                 </Grid>
-                <Grid item xs={10} sm={6} className={styles.EtextContainer}>
+                <Grid item xs={10} sm={4} className={styles.EtextContainer}>
                     <p>Communication between AEC disciplines is fragmented & ineffective</p>
                 </Grid>
             </Grid>
@@ -36,6 +40,6 @@ export default function AeCSection() {
                 </Grid>
             </Grid>
 
-        </>
+        </div>
     )
 }

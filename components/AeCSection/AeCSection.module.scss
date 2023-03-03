@@ -6,6 +6,7 @@ $extra-large-screen: 1560px;
 
 
 .AContainer {
+  margin-top: 5rem;
   padding-left: 5rem;
   padding-top: 4rem;
 
@@ -35,16 +36,16 @@ $extra-large-screen: 1560px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     padding-bottom: 5rem;
     color: black;
 
     :global p {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
-      font-weight: lighter;
+      font-weight: 400;
       font-size: 1.5rem;
-      width: 300px;
+      width: 400px;
 
       @media (max-width: $small-screen) {
         width: auto;
@@ -59,6 +60,7 @@ $extra-large-screen: 1560px;
 }
 
 .EContainer {
+  margin-left: 3rem;
   padding-left: 5rem;
   padding-top: 4rem;
   @media (max-width: $small-screen) {
@@ -74,8 +76,7 @@ $extra-large-screen: 1560px;
     justify-content: flex-end;
 
     :global img {
-      width: 50%;
-      height: 80%;
+      width: 300px;
       object-fit: contain;
       object-position: center;
 
@@ -89,14 +90,14 @@ $extra-large-screen: 1560px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-bottom: 5rem;
-    align-items: center;
+    padding-bottom: 2rem;
+    align-items: flex-end;
     color: #000 !important;
 
     :global p {
-      margin-left: 0.5rem;
+      margin-left: 6rem;
       margin-right: 0.5rem;
-      font-weight: lighter;
+      font-weight: 400;
       font-size: 1.5rem;
       width: 300px;
 
@@ -148,17 +149,17 @@ $extra-large-screen: 1560px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 5rem;
+    align-items: flex-end;
+    padding-bottom: 3rem;
     color: black;
 
     :global p {
       margin-left: 0.5rem;
-      margin-right: 0.5rem;
-      font-weight: lighter;
+      margin-right: 2rem;
+      font-weight: 400;
       font-size: 1.5rem;
       padding: 3rem;
-      width: 300px;
+      width: 350px;
 
       @media (max-width: $small-screen) {
         width: auto;

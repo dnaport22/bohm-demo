@@ -13,7 +13,9 @@ export default function App({Component, pageProps}: AppProps) {
         <div>
             <CssBaseline />
             <HeaderBar/>
-            <Box>
+            <Box style={{
+               marginBottom: "10rem"
+            }}>
                 <Component {...pageProps} />
             </Box>
             <FooterBar/>

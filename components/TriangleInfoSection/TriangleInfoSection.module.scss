@@ -10,11 +10,12 @@ $extra-large-screen: 1560px;
   padding-top: 5rem;
   width: 80%;
   float: right;
+  margin-right: 1rem;
 
   :global p {
     width: 80%;
     color: #000;
-    font-weight: lighter;
+    font-weight: 400;
 
     @media (max-width: $small-screen) {
       width: 100%;
@@ -30,8 +31,8 @@ $extra-large-screen: 1560px;
 
 .triangleContainer {
   display: flex;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: flex-end;
+  width: 81vw;
   @media (max-width: $small-screen) {
     flex-direction: row;
     justify-content: center;
@@ -44,8 +45,8 @@ $extra-large-screen: 1560px;
   margin-top: 5rem;
 
   :global p {
-    font-size: 2rem;
-    font-weight: lighter;
+    font-size: 2.7rem;
+    font-weight: 400;
     color: #000;
     text-align: right;
 
@@ -60,15 +61,23 @@ $extra-large-screen: 1560px;
 }
 
 .triangleImage {
-  width: 25%;
-  height: 80%;
+  width: 32%;
   object-fit: contain;
   object-position: center;
-  padding-left: 5rem;
 
   @media (max-width: $small-screen) {
     width: 80%;
     padding-bottom: 2rem;
     padding-left: 0;
+  }
+}
+
+.imageContainer {
+  margin-bottom: 20rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4rem;
+  img ~ img {
+    margin-left: 5rem;
   }
 }
