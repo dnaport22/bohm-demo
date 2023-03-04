@@ -23,7 +23,7 @@ export default function Contactus() {
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={12} sm={6}>
                     <Box style={{
-                        backgroundColor: "#fff",
+                        backgroundColor: "transparent",
                         padding: "2rem",
                         borderRadius: "13px",
                         margin: "2rem"
@@ -50,7 +50,7 @@ export default function Contactus() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Box style={{
-                        backgroundColor: "#fff",
+                        backgroundColor: "transparent",
                         padding: "2rem",
                         borderRadius: "13px",
                         margin: "2rem",

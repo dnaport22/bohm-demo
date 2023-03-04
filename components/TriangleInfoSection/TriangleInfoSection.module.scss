@@ -16,10 +16,6 @@ $extra-large-screen: 1560px;
     width: 80%;
     color: #000;
     font-weight: 400;
-
-    @media (max-width: $small-screen) {
-      width: 100%;
-    }
   }
 
   @media (max-width: $small-screen) {
@@ -36,6 +32,7 @@ $extra-large-screen: 1560px;
   @media (max-width: $small-screen) {
     flex-direction: row;
     justify-content: center;
+    width: 100vw;
   }
 }
 
@@ -52,6 +49,7 @@ $extra-large-screen: 1560px;
 
     @media (max-width: $small-screen) {
       width: 100%;
+      padding: 2rem;
     }
   }
 
@@ -68,7 +66,7 @@ $extra-large-screen: 1560px;
   @media (max-width: $small-screen) {
     width: 80%;
     padding-bottom: 2rem;
-    padding-left: 0;
+    padding-left: 2rem;
   }
 }
 
@@ -79,5 +77,13 @@ $extra-large-screen: 1560px;
   margin-top: 4rem;
   img ~ img {
     margin-left: 5rem;
+  }
+  
+  @media (max-width: $small-screen) {
+    flex-direction: column;
+    justify-content: center;
+    img ~ img {
+      margin-left: 0;
+    }
   }
 }
