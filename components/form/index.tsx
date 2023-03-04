@@ -11,7 +11,7 @@ const Form = ({modalState}: any) => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState(false);
 
-    const formUrl = "https://script.google.com/macros/s/AKfycbwUnTnYBX5Mah7mO4KtBP3IlctMidK_Otq6gqMFT9MoOwg9Ikk8SeBt0jREl79IfTk/exec";
+    const formUrl = "https://script.google.com/macros/s/AKfycbwZK6R-jEn4Vs85EkhSx8bHyoS5LX4mo9InUlSyYcqkaQK0rUfQsjp9pJrlIN4ClAga/exec";
 
     const fileUrl = "https://docs.google.com/document/u/0/export?format=pdf&id=1E42YQjkuSupkkGUOLZDa1Xl6faasv6C6urXfM0n0pjA";
 
