@@ -274,13 +274,13 @@ $small-screen: 576px;
 }
 
 .usLogoContainer {
-  margin: 10rem;
+  margin: 10rem !important;
   padding-top: 5rem;
   @media (max-width: $small-screen) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
+    margin: 0 !important;
 
     img {
       padding: 2rem;
@@ -308,14 +308,14 @@ $small-screen: 576px;
 .crossContainerText {
   position: absolute;
   top: 90rem;
-  margin-left: 3rem;
+  margin-left: 3em !important;
   font-family: Inter, serif !important;
   font-size: 1.4rem !important;
   @media (max-width: $small-screen) {
     position: inherit;
     display: flex;
     top: 0;
-    margin: 0;
+    margin: 0 !important;
     p {
       width: 100vw !important;
       margin: 0 !important;
@@ -339,10 +339,13 @@ $small-screen: 576px;
   position: absolute;
   top: 110rem;
   width: 100vw;
+  padding-right: 7em;
+  padding-left: 7em;
   @media (max-width: $small-screen) {
     position: inherit;
     display: flex;
     top: 0;
+    padding: 0;
   }
 
 }
