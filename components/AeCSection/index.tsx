@@ -17,7 +17,9 @@ export default function AeCSection() {
                 <Grid item xs={12} sm={6} className={styles.AtextContainer}>
                     <p>The AEC industry and the built
                         environment is responsible for
-                        nearly 40% of global</p>
+                        nearly 40% of global CO<sub style={{
+                            fontSize: "1rem",
+                        }}>2</sub></p>
                 </Grid>
             </Grid>
 
