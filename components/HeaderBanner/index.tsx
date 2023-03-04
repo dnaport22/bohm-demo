@@ -1,13 +1,5 @@
 import styles from "./headerBanner.module.scss";
 
-interface ISectionOneProps {
-    image: string;
-    mainText: string;
-    subText: string;
-    style?: any;
-    withDownloadButton?: boolean;
-}
-
 import React, {useState} from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';

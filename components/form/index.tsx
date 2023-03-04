@@ -13,6 +13,12 @@ const Form = ({modalState}: any) => {
 
     const formUrl = "https://script.google.com/macros/s/AKfycbwUnTnYBX5Mah7mO4KtBP3IlctMidK_Otq6gqMFT9MoOwg9Ikk8SeBt0jREl79IfTk/exec";
 
+    const fileUrl = "https://docs.google.com/document/u/0/export?format=pdf&id=1E42YQjkuSupkkGUOLZDa1Xl6faasv6C6urXfM0n0pjA";
+
+    const downloadFile = () => {
+        window.open(fileUrl, '_blank');
+    };
+
     const handleSubmit = (e: any) => {
         e.preventDefault();
         let formData = new FormData();
@@ -32,6 +38,7 @@ const Form = ({modalState}: any) => {
             setJobTitle('');
             setEmail('');
             modalState(false);
+            downloadFile();
         }).catch((err) => {
             console.log(err);
             setError(true);
@@ -48,32 +55,32 @@ const Form = ({modalState}: any) => {
                     </Alert>
                     : <></>
             }
-        <form onSubmit={handleSubmit} className={styles.form}>
-            <TextField
-                required
-                label="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                className={styles.name}
-            />
-            <TextField
-                label="Job Title"
-                value={jobTitle}
-                onChange={(e: any) => setJobTitle(e.target.value)}
-                className={styles.jobTitle}
-            />
-            <TextField
-                required
-                label="Email"
-                value={email}
-                onChange={(e: any) => setEmail(e.target.value)}
-                className={styles.email}
-            />
-            <Button type="submit" className={styles.submit}>
-                Download Whitepaper
-            </Button>
-        </form>
-            </>
+            <form onSubmit={handleSubmit} className={styles.form}>
+                <TextField
+                    required
+                    label="Full Name"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className={styles.name}
+                />
+                <TextField
+                    label="Job Title"
+                    value={jobTitle}
+                    onChange={(e: any) => setJobTitle(e.target.value)}
+                    className={styles.jobTitle}
+                />
+                <TextField
+                    required
+                    label="Email"
+                    value={email}
+                    onChange={(e: any) => setEmail(e.target.value)}
+                    className={styles.email}
+                />
+                <Button type="submit" className={styles.submit}>
+                    Download Whitepaper
+                </Button>
+            </form>
+        </>
     );
 };
 
