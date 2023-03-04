@@ -27,7 +27,9 @@ export default function Aboutus() {
                         width: "400px",
                     }} />
                 </Grid>
-                <Grid item xs={12} sm={3} className={"usLogoContainerText"}>
+                <Grid item xs={12} sm={3} className={"usLogoContainerText"} style={{
+                    fontFamily: "Inter"
+                }}>
                     <p>We are a community of architects, engineers, constructors & technologists,
                         driven by the desire to make waste-free working a sector-wide norm</p>
                 </Grid>
@@ -42,7 +44,8 @@ export default function Aboutus() {
                 >
                     <p style={{
                             width: "400px",
-                            marginLeft: "5rem"
+                            marginLeft: "5rem",
+                            fontFamily: "Inter"
                         }}
                     >The result is a world where any built environment is precisely <br/>
                         <br/>

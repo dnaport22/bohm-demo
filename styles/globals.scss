@@ -293,7 +293,6 @@ $small-screen: 576px;
   top: 19rem;
   float: right;
   right: 16rem;
-  font-family: Inter, serif !important;
   font-size: 1.2rem !important;
 
   @media (max-width: $small-screen) {
@@ -309,7 +308,6 @@ $small-screen: 576px;
   position: absolute;
   top: 90rem;
   margin-left: 3em !important;
-  font-family: Inter, serif !important;
   font-size: 1.4rem !important;
   @media (max-width: $small-screen) {
     position: inherit;
