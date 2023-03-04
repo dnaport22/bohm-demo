@@ -56,11 +56,15 @@ export default function HeaderBar() {
                     <Box
                         sx={{ mr: 2, display: { xs: 'none', sm: 'block' } }}
                         component="img" src={"logo.png"} style={{
-                        width: "60px",
+                        width: "70px",
                         margin: "10px",
                         paddingTop: "10px"
                     }} />
-                    <Box sx={{ flexGrow: 1, marginLeft: 10, display: { xs: 'none', sm: 'block' } }}>
+                    <Box
+                        style={{
+                            margin: "0 0 2em 0"
+                        }}
+                        sx={{ flexGrow: 1, marginLeft: 10, display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button onClick={() => menuClick(item)} key={item} sx={{ color: 'black' }}>
                                 {item}
