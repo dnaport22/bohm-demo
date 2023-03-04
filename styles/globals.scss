@@ -262,3 +262,133 @@ $small-screen: 576px;
     }
   }
 }
+
+.aboutLogoContainer {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: $small-screen) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.usLogoContainer {
+  margin: 10rem;
+  padding-top: 5rem;
+  @media (max-width: $small-screen) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+    img {
+      padding: 2rem;
+    }
+  }
+}
+
+.usLogoContainerText {
+  position: absolute;
+  top: 19rem;
+  float: right;
+  right: 16rem;
+  font-family: Inter, serif !important;
+  font-size: 1.2rem !important;
+
+  @media (max-width: $small-screen) {
+    position: inherit;
+    display: flex;
+    top: 0;
+    padding: 3rem !important;
+    font-size: 1.4rem !important;
+  }
+}
+
+.crossContainerText {
+  position: absolute;
+  top: 90rem;
+  margin-left: 3rem;
+  font-family: Inter, serif !important;
+  font-size: 1.4rem !important;
+  @media (max-width: $small-screen) {
+    position: inherit;
+    display: flex;
+    top: 0;
+    margin: 0;
+    p {
+      width: 100vw !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+.crossContainer {
+  position: absolute;
+  float: right;
+  right: 20rem;
+  top: 66rem;
+  @media (max-width: $small-screen) {
+    position: inherit;
+    display: flex;
+    top: 0;
+  }
+}
+
+.contactContainer {
+  position: absolute;
+  top: 110rem;
+  width: 100vw;
+  @media (max-width: $small-screen) {
+    position: inherit;
+    display: flex;
+    top: 0;
+  }
+
+}
+
+.aboutUsMainContainer {
+  padding-bottom: 60rem;
+  @media (max-width: $small-screen) {
+    padding: 0;
+  }
+}
+
+.contactUsFormSmallField {
+  width: 100%;
+  margin: 1rem;
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+  }
+  span {
+    color: gray;
+    font-size: 0.8rem;
+    margin: 1rem;
+  }
+}
+
+.formButton {
+  background: black;
+  color: white;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.formTextArea {
+  border: none;
+  margin-top: 7rem;
+  height: 300px;
+  border-radius: 13px;
+  padding: 1rem;
+  font-size: 1rem;
+  @media (max-width: $small-screen) {
+    margin-top: 1rem;
+  }
+}

@@ -1,21 +1,42 @@
-import Head from "next/head";
-import SectionOne from "@/components/sectionOne";
-import SectionTwo from "@/components/sectionTwo";
-import SectionThree from "@/components/sectionThree";
-import SectionFour from "@/components/sectionFour";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import styles from "@/components/form/form.module.scss";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import React from "react";
 import {TextareaAutosize} from "@mui/base";
+import axios from "axios";
 
 export default function Contactus() {
     const [fullName, setFullName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
     const [error, setError] = React.useState(false);
+
+    const url = "https://script.google.com/macros/s/AKfycbz_OYdDNrXkmvE5QiezVBuMexLgDa2HU78GN9l6RW9MYh6Sg21TyPe5UP5LuMrdSNYcTA/exec";
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        let formData = new FormData();
+        formData.append("name", fullName);
+        formData.append("email", email);
+        formData.append("message", message);
+        formData.append("datetime", new Date().toISOString());
+
+        axios.post(url, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((res) => {
+            console.log(res);
+            setError(false);
+            setFullName('');
+            setMessage('');
+            setEmail('');
+        }).catch((err) => {
+            console.log(err);
+            setError(true);
+        });
+    };
 
     return (
         <div className={"contactUs"}>
@@ -31,20 +52,30 @@ export default function Contactus() {
                         <h1>Contact Us</h1>
                         <p>Explore the future of AEC with us.<br/>Feel free to get in touch.</p>
                         <form onSubmit={() => {}} className={styles.form}>
-                            <TextField
-                                required
-                                label="Full Name"
-                                value={fullName}
-                                onChange={(e) => setFullName(e.target.value)}
-                                className={styles.name}
-                            />
-                            <TextField
-                                required
-                                label="Email"
-                                value={email}
-                                onChange={(e: any) => setEmail(e.target.value)}
-                                className={styles.email}
-                            />
+                            <div className={"contactUsFormSmallField"}>
+                                <span>Name</span>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Full Name"
+                                    value={fullName}
+                                    onChange={(e) => setFullName(e.target.value)}
+                                />
+                            </div>
+
+                            <div className={"contactUsFormSmallField"}>
+                                <span>Email</span>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
+                            <Button onClick={handleSubmit} className={"formButton"}>
+                                Send Message
+                            </Button>
                         </form>
                     </Box>
                 </Grid>
@@ -58,20 +89,13 @@ export default function Contactus() {
                         flexDirection: "column",
                         height: "85%",
                     }}>
-                    <TextareaAutosize
+                    <textarea
                         required
-                        aria-label="minimum height"
                         placeholder={"Message"}
-                        value={email}
+                        value={message}
                         onChange={(e: any) => setMessage(e.target.value)}
-                        className={styles.email}
-                        style={{
-                            height: "100%",
-                        }}
+                        className={"formTextArea"}
                     />
-                    <Button type="submit" className={styles.submit}>
-                        Send Message
-                    </Button>
                     </Box>
                 </Grid>
             </Grid>
