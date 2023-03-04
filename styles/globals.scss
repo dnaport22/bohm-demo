@@ -388,7 +388,9 @@ $small-screen: 576px;
   border-radius: 13px;
   padding: 1rem;
   font-size: 1rem;
+  margin-bottom: 15em;
   @media (max-width: $small-screen) {
     margin-top: 1rem;
+    margin-bottom: 1em;
   }
 }
