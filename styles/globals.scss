@@ -376,8 +376,8 @@ $small-screen: 576px;
 }
 
 .formButton {
-  background: black;
-  color: white;
+  background: black !important;
+  color: white !important;
   width: 100%;
   margin: 1rem;
   border-radius: 10px;
