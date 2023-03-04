@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import styles from "@/components/form/form.module.scss";
 import Button from "@mui/material/Button";
 import React from "react";
-import {TextareaAutosize} from "@mui/base";
 import axios from "axios";
 
 export default function Contactus() {
@@ -51,7 +50,9 @@ export default function Contactus() {
                     }}>
                         <h1>Contact Us</h1>
                         <p>Explore the future of AEC with us.<br/>Feel free to get in touch.</p>
-                        <form onSubmit={() => {}} className={styles.form}>
+                        <form onSubmit={() => {}} className={styles.form} style={{
+                            padding: 0
+                        }}>
                             <div className={"contactUsFormSmallField"}>
                                 <span>Name</span>
                                 <input
