@@ -28,7 +28,7 @@ $extra-large-screen: 1560px;
 .triangleContainer {
   display: flex !important;
   justify-content: flex-end !important;
-  width: 81vw;
+  width: 81vw !important;
   @media (max-width: $small-screen) {
     flex-direction: row;
     justify-content: center;
