@@ -389,6 +389,7 @@ $small-screen: 576px;
   padding: 1rem;
   font-size: 1rem;
   margin-bottom: 15em;
+  font-family: inherit;
   @media (max-width: $small-screen) {
     margin-top: 1rem;
     margin-bottom: 1em;
