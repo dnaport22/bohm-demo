@@ -365,6 +365,7 @@ $small-screen: 576px;
     padding: 1rem;
     border: none;
     font-size: 1rem;
+    font-family: "Inter", serif;
   }
   span {
     color: gray;
@@ -388,6 +389,7 @@ $small-screen: 576px;
   border-radius: 13px;
   padding: 1rem;
   font-size: 1rem;
+  font-family: "Inter", serif;
   margin-bottom: 15em;
   @media (max-width: $small-screen) {
     margin-top: 1rem;
