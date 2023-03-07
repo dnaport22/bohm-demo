@@ -3,6 +3,8 @@ import HeaderBanner from "@/components/HeaderBanner";
 import React from "react";
 import AeCSection from "@/components/AeCSection";
 import TriangleInfoSection from "@/components/TriangleInfoSection";
+import Box from "@mui/material/Box";
+import styles from "@/components/HeaderBanner/headerBanner.module.scss";
 
 export default function Home() {
     return (
@@ -15,9 +17,20 @@ export default function Home() {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
             </Head>
-            <HeaderBanner />
-            <AeCSection />
-            <TriangleInfoSection />
+            <Box style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                alignContent: "center",
+                height: "100vh",
+                fontSize: "1.2rem"
+            }}>
+                <Box component="img" src={"logo.png"} style={{
+                    width: "50px"
+                }} />
+                <p>Under Construction</p>
+            </Box>
         </>
     )
 }

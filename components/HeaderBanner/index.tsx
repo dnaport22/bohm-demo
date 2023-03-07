@@ -61,20 +61,20 @@ const HeaderBanner = () => {
                 </Modal>
 
             </Grid>
-            <Grid sx={{ display: { sm: 'none' } }} item xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
                 <Box component="img" src={"logo.png"} className={styles.imageContainer} />
             </Grid>
         </Grid>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}
-                 component="img"
-                 style={{
-                     position: "absolute",
-                     top: "-40px",
-                     right: "-40px",
-                     width: "700px",
-                     height: "700px"
-                 }}
-                 src={"logo.png"} className={styles.imageContainer} />
+            {/*<Box sx={{ display: { xs: 'none', sm: 'block' } }}*/}
+            {/*     component="img"*/}
+            {/*     style={{*/}
+            {/*         position: "absolute",*/}
+            {/*         top: "-40px",*/}
+            {/*         right: "-40px",*/}
+            {/*         width: "700px",*/}
+            {/*         height: "700px"*/}
+            {/*     }}*/}
+            {/*     src={"logo.png"} className={styles.imageContainer} />*/}
         </>
     );
 };
